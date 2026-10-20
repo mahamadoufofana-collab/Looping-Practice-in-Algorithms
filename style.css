@@ -1,0 +1,644 @@
+/* ==========================================================
+   Looping Practice in Algorithms - Style Sheet
+   Clean, modern, beginner-friendly, and fully responsive CSS
+   ========================================================== */
+
+/* 1. Global Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #2563eb;       /* Royal Blue */
+  --primary-hover: #1d4ed8;
+  --secondary-color: #64748b;     /* Slate Gray */
+  --secondary-hover: #475569;
+  --accent-color: #0284c7;        /* Sky Blue */
+  --success-color: #16a34a;       /* Green */
+  --error-color: #dc2626;         /* Red */
+  --bg-color: #f8fafc;            /* Light clean background */
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --border-focus: #3b82f6;
+  --text-main: #1e293b;           /* Slate 800 */
+  --text-muted: #64748b;          /* Slate 500 */
+  --code-bg: #0f172a;             /* Dark navy for code */
+  --code-text: #38bdf8;           /* Cyan text for code */
+  --table-border: #cbd5e1;
+  --table-header: #f1f5f9;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.05);
+  --radius: 10px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding-bottom: 2rem;
+}
+
+/* 2. Main Header */
+.main-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: #ffffff;
+  padding: 2.5rem 1.5rem 1.75rem;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.35rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 1.25rem;
+  max-width: 850px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.nav-btn.highlight {
+  background: #f59e0b;
+  border-color: #d97706;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.nav-btn.highlight:hover {
+  background: #fbbf24;
+}
+
+/* 3. Main Container */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+}
+
+/* 4. Intro Section Card */
+.intro-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.intro-card h2 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.features-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.feature-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.feature-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.feature-item p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* 5. Level Sections */
+.level-section {
+  margin-bottom: 3.5rem;
+}
+
+.level-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.level-header h2 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin: 0.4rem 0 0.25rem;
+}
+
+.level-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-accent {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+/* 6. Problem Cards Grid */
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+  gap: 1.75rem;
+}
+
+@media (max-width: 640px) {
+  .problems-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.problem-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.problem-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.5rem;
+}
+
+.problem-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #eff6ff;
+  color: var(--primary-color);
+  border: 1px solid #bfdbfe;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.description {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  min-height: 2.7rem;
+}
+
+/* 7. Form Controls */
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: var(--text-main);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.grid-textarea {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  resize: vertical;
+}
+
+.helper-text {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* 8. Buttons */
+.button-group {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+/* 9. Output Box */
+.output-container {
+  margin-bottom: 1.25rem;
+}
+
+.output-title {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.5px;
+}
+
+.output-box {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #1e293b;
+  min-height: 52px;
+  line-height: 1.5;
+  font-family: inherit;
+}
+
+.output-box.code-output {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: #f1f5f9;
+  line-height: 1.4;
+}
+
+.output-box.error {
+  border-left-color: var(--error-color);
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+.output-box.success {
+  border-left-color: var(--success-color);
+}
+
+/* 10. How It Works (Collapsible Details) */
+.how-it-works {
+  margin-top: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.how-it-works summary {
+  padding: 0.65rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  background-color: #f8fafc;
+  user-select: none;
+  transition: background-color 0.15s ease;
+}
+
+.how-it-works summary:hover {
+  background-color: #f1f5f9;
+  color: var(--primary-color);
+}
+
+.details-content {
+  padding: 0.85rem 0.9rem;
+  font-size: 0.85rem;
+  color: #334155;
+  border-top: 1px solid var(--border-color);
+  background-color: #ffffff;
+}
+
+.details-content p {
+  margin-bottom: 0.5rem;
+}
+
+.details-content ol,
+.details-content ul {
+  margin-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.details-content li {
+  margin-bottom: 0.25rem;
+}
+
+/* 11. Pseudocode and Code Snippets */
+.pseudocode {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  margin: 0.5rem 0 0.75rem;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  background-color: #e2e8f0;
+  color: #0f172a;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+/* 12. Trace Tables */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0.6rem 0 0.8rem;
+}
+
+.trace-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.trace-table th,
+.trace-table td {
+  border: 1px solid var(--table-border);
+  padding: 0.45rem 0.65rem;
+}
+
+.trace-table th {
+  background-color: var(--table-header);
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.trace-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.trace-table .table-highlight {
+  background-color: #eff6ff;
+  font-weight: bold;
+}
+
+/* 13. Section 6 Analysis Section */
+.analysis-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-sm);
+  margin-top: 3.5rem;
+}
+
+.section-title-box {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.section-title-box h2 {
+  font-size: 1.85rem;
+  color: #0f172a;
+  margin: 0.5rem 0 0.35rem;
+}
+
+.section-title-box .lead {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.analysis-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.analysis-card-header {
+  background-color: #f8fafc;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+}
+
+.analysis-card-header .tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4338ca;
+  background-color: #e0e7ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.35rem;
+}
+
+.analysis-card-header h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.analysis-card-body {
+  padding: 1.25rem;
+}
+
+.analysis-card-body h4 {
+  font-size: 1.05rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.analysis-card-body p {
+  margin-bottom: 0.85rem;
+}
+
+.callout {
+  background-color: #eff6ff;
+  border-left: 4px solid var(--primary-color);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.callout h4 {
+  color: #1e40af;
+  margin-bottom: 0.35rem;
+}
+
+.math-display {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  background-color: #ffffff;
+  border: 1px dashed #cbd5e1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  display: block;
+  margin: 0.5rem 0;
+  color: #0f172a;
+}
+
+.example-box {
+  background-color: #faf5ff;
+  border: 1px solid #e9d5ff;
+  border-left: 4px solid #a855f7;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.example-box strong {
+  color: #6b21a8;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* 14. Footer */
+.main-footer {
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-content p {
+  margin-bottom: 0.25rem;
+}
+
+/* 15. Responsive adjustments */
+@media (max-width: 768px) {
+  .main-header h1 {
+    font-size: 1.6rem;
+  }
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+  .analysis-section {
+    padding: 1.25rem;
+  }
+}
